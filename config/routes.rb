@@ -1,7 +1,13 @@
 RailsDBT::Application.routes.draw do
+  root :to => 'pages#home'
+  
+  get "users/new"
+  
+  match '/signup', to: 'users#new'
+
   get "pages/about"
 
-  get "pages/home"
+  #get "pages/home"
 
   get "pages/contact"
   
