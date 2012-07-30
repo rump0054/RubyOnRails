@@ -4,14 +4,9 @@ RailsDBT::Application.routes.draw do
   get "users/new"
   
   match '/signup', to: 'users#new'
-
-  get "pages/about"
-
-  #get "pages/home"
-
-  get "pages/contact"
-  
-  get "pages/about"
+  match '/about', to: 'pages#about'
+  match '/contact', to: 'pages#contact'
+  match '/help', to: 'pages#help'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
